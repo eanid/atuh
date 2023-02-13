@@ -1,0 +1,33 @@
+@url = http://localhost
+@port = 3000
+###
+POST {{url}}:{{port}}/register
+Content-Type: application/json
+
+{
+    "email" : "eansza@gmail.com",
+    "password" : "12345678",
+    "name" :   "daniel"
+}
+###
+POST {{url}}:{{port}}/login
+Content-Type: application/json
+
+{
+    "email" : "ean@gmail.com",
+    "password" : "12345678"
+}
+###
+GET {{url}}:{{port}}/products
+GET {{url}}:{{port}}/products/3
+###
+###
+PATCH {{url}}:{{port}}/products/3
+Content-Type: application/json
+
+{
+    "name" : "eraser",
+    "price" :   1500
+}
+###
+DELETE {{url}}:{{port}}/products/4
